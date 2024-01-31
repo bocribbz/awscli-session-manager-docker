@@ -17,7 +17,7 @@ Build the container
 docker build . -t awscli-local
 ```
 
-Use an alias:
+Shorten the command as an alias or function
 
 ```
 # you can use it as an alias
