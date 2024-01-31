@@ -11,6 +11,21 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-docker.html#cli
 
 ## Sample usage
 
+Build the container
+
 ```console
 docker build . -t awscli-local
 ```
+
+Use an alias:
+
+```
+# you can use it as an alias
+alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $PWD:/aws awscli-local'
+# or a function
+aws () {
+    docker run --rm -it -v ~/.aws:/root/.aws -v $PWD:/aws awscli-local "$@"
+}
+```
+
+If you get Ctrl+M chars in the output, consider changing the args from `-it` to `-i`.
