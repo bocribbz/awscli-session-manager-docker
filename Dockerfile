@@ -1,4 +1,4 @@
-FROM amazon/aws-cli
+FROM --platform=linux/amd64 amazon/aws-cli
 
 ENV LC_ALL=C.UTF-8
 
